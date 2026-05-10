@@ -1,0 +1,134 @@
+# Configuration related to monitoring file changes.
+watch:
+  # File extensions when watching directories. Shiba recognizes these file extensions as Markdown
+  # files and updates its preview when they are modified.
+  file_extensions:
+    - md
+    - mkd
+    - markdown
+  # Throttle for debouncing file change events in milliseconds. This is useful to avoid the preview
+  # repeatedly within very short span. This throttle is necessary since it is very common that text
+  # editor modifies the file multiple times on saving.
+  debounce_throttle: 50
+
+# Key mappings. Keys are key binds and their values are corresponding actions to be bound. Any
+# keymap sequences supported by mousetrap[1] are available for keys. Predefined action names are
+# available for values.
+#
+# [1]: https://craig.is/killing/mice
+keymaps:
+#  j: ScrollDown
+#  k: ScrollUp
+#  h: ScrollLeft
+#  l: ScrollRight
+#  ctrl+b: Back
+#  ctrl+f: Forward
+#  ctrl+o: OpenFile
+#  ctrl+d: ScrollPageDown
+#  ctrl+u: ScrollPageUp
+#  ctrl+r: History
+#  ctrl+n: ScrollNextSection
+#  ctrl+p: ScrollPrevSection
+#  /: Search
+#  down: ScrollDown
+#  up: ScrollUp
+#  left: ScrollLeft
+#  right: ScrollRight
+#  pagedown: ScrollPageDown
+#  pageup: ScrollPageUp
+#  ctrl+down: ScrollBottom
+#  ctrl+up: ScrollTop
+#  ctrl+j: ScrollNextSection
+#  ctrl+k: ScrollPrevSection
+#  f12: OpenDevTools
+#  ?: Help
+
+# Configuration related to text search.
+search:
+  # How search query matches to text. The following preset matchers are available. Note that matcher
+  # can be changed by clicking an icon in the search box.
+  #
+  # - SmartCase: case-sensitive when some upper case alphabets are included. Otherwise case-insensitive
+  # - CaseSensitive: always case-sensitive
+  # - CaseInsensitive: always case-insensitive
+  # - CaseSensitiveRegex: case-sensitive regular expression
+  matcher: SmartCase
+
+# Configuration related to application window.
+window:
+  # Remember the window state (position, size, ...) and restore it when opening Shiba at next time.
+  restore: true
+  # Theme to apply to the application window. The following predefined values are available.
+  #
+  # - System: use theme set to the system settings
+  # - Dark: always use dark theme
+  # - Light: always use light theme
+  # theme: System
+  theme: Dark
+  # Application window is always on top of other windows.
+  always_on_top: false
+  # Default window size (width and height) in physical pixels. When `null` is set, the default window
+  # size 800x600 pixels is used. When `restore` is set to `true` and there is a saved window state,
+  # the window size in the state is used.
+  # The following example creates a window with 1000x2000 pixels.
+  #
+  # ```
+  # default_size:
+  #   width: 1000
+  #   height: 2000
+  # ```
+  default_size: null
+  # Setting `true` shows a menu bar at the top of application window. Setting `false` hides the menu bar.
+  # This configuration is effective only on Linux and Windows. On macOS, the menu bar is always set.
+  menu_bar: false
+
+# Configuration related to Markdown preview content.
+preview:
+  # Highlight theme for code blocks. Themes provided by highlight.js are available. For example, the
+  # following configuration uses 'Mono Blue' in light mode, and uses 'Tokyo Night Dark' in dark mode.
+  #
+  # ```
+  # highlight:
+  #   light: Mono Blue
+  #   dark: Tokyo Night Dark
+  # ```
+  #
+  # See the demo page to know all highlight themes: https://highlightjs.org/static/demo/
+  highlight:
+    light: GitHub
+    dark: GitHub Dark
+  # Override CSS styles applied to Markdown preview with specified CSS file path. The path is
+  # relative to the configuration directory.
+  # Notes:
+  # - all styles must be applied under the `<article class="markdown-body">` element. Otherwise
+  #   they breaks some UI in the application.
+  # - fetching external resources (e.g. fonts) is not allowed for security reason at this point
+  #
+  # For example, when you want to apply dimmed version of GitHub color theme,
+  #
+  # 1. Download `dark_dimmed.css`[1], dimmed version of GitHub Markdown CSS
+  # 2. Put the downloaded file in the configuration directory
+  # 3. Set `css: dark_dimmed.css` below
+  #
+  # [1]: https://github.com/hyrious/github-markdown-css
+  # css: shiba.css
+  css: dark_dimmed.css
+  # Maximum number of files to remember as 'recent files'. The recent files are remembered
+  # persistently and will be restored when this application launches at next time.
+  recent_files: 100
+
+# Configuration related to dialog to open a file or watch a directory.
+dialog:
+  # Default directory path to open when selecting a file to preview or a directory to watch. The
+  # following example opens `~/Documents` by default.
+  #
+  # ```
+  # default_dir: ~/Documents
+  # ```
+  default_dir: null
+
+scroll:
+  step: 50
+  pageStep: 250
+
+
