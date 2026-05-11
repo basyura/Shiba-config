@@ -1124,13 +1124,15 @@
 
 /*-- カスタム --*/
 
+nav {
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
 .markdown-body {
+  border-top: 1px solid gray;
   border-left: 1px solid gray;
-  body {
-    border-top: 1px solid gray;
-    border-right: 1px solid gray;
-    border-bottom: 1px solid gray;
-  }
+  border-bottom: 1px solid gray;
   h1,
   h2,
   h3 {
@@ -1139,8 +1141,7 @@
     border-bottom: none;
   }
   h1 {
-    padding-bottom: unset;
-    border-bottom: none;
+    border-bottom: 1px solid rgba(250, 207, 78, 0.2);
   }
   h1::before {
     color: rgba(250, 207, 78, 0.5) !important;
