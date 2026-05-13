@@ -1041,8 +1041,25 @@
 }
 
 .markdown-body .task-list-item-checkbox {
-  margin: 0 0.2em 0.25em -1.4em;
+  width: 1em;
+  height: 1em;
+  margin: 0 0.5em 0.25em -1.4em;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #2e3235;
+  border: 1px solid #8b949e;
+  border-radius: 0.25em;
+  opacity: 1;
   vertical-align: middle;
+}
+
+.markdown-body .task-list-item-checkbox:checked {
+  background-color: #1f6feb;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M6.2 11.3 2.9 8l1.2-1.2 2.1 2.1 5.7-5.7L13.1 4z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1em 1em;
+  border-color: #1f6feb;
 }
 
 .markdown-body ul:dir(rtl) .task-list-item-checkbox {
