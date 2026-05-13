@@ -1170,6 +1170,9 @@ nav {
     color: #facf4e;
     font-weight: normal;
   }
+  li::marker {
+    color: #facf4e !important;
+  }
   .search-text-current-start {
     text-decoration: underline;
     text-underline-offset: 3px;
