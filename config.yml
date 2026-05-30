@@ -131,4 +131,6 @@ scroll:
   step: 50
   pageStep: 250
 
+editor:
+  path: MacVim.app
 
