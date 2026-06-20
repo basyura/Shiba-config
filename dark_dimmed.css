@@ -1215,6 +1215,10 @@ nav {
   }
 }
 
+.Mui-selected {
+  background-color: gray !important;
+}
+
 /* for mac */
 body.platform-darwin {
   .markdown-body {
